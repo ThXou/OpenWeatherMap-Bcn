@@ -10,7 +10,7 @@
 
 @interface APIManager : NSObject
 
-- (void)downloadWeatherInformationWithCompletion:(void(^)(NSError *error))completion;
+- (void)downloadWeatherInformation;
 - (NSURL *)savedDataURL;
 
 @end

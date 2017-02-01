@@ -10,6 +10,6 @@
 
 @interface Parser : NSObject
 
-- (void)parseResponseWithCompletion:(void(^)(NSArray *parsedData))completion;
+- (void)parseResponse:(NSDictionary *)response completion:(void(^)(NSArray *parsedData))completion;
 
 @end

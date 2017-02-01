@@ -8,7 +8,7 @@
 
 #import "APIManager.h"
 
-static NSString *kAPIURL = @"http://api.openweathermap.org/data/2.5/forecast/daily?q=Barcelona&mode=json&units=metric&cnt=10&APPID=7855ff73bf07f8dc5cb11c3c93e28c24";
+static NSString *kAPIURL = @"http://api.openweathermap.org/data/2.5/forecast/daily?q=Barcelona&mode=json&units=metric&cnt=11&APPID=7855ff73bf07f8dc5cb11c3c93e28c24";
 
 
 @interface APIManager () <NSURLSessionDownloadDelegate>
@@ -21,7 +21,7 @@ static NSString *kAPIURL = @"http://api.openweathermap.org/data/2.5/forecast/dai
 
 @implementation APIManager
 
-- (void)downloadWeatherInformationWithCompletion:(void(^)(NSError *error))completion
+- (void)downloadWeatherInformation
 {
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:@"sessionConfiguration"];
     self.backgroundSession = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:self delegateQueue:[NSOperationQueue mainQueue]];
